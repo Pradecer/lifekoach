@@ -1,0 +1,615 @@
+﻿<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>LIFEKOACH — Final Interactive Frontend</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Tagline overlay -->
+    <div class="tagline-overlay" id="taglineOverlay" aria-hidden="true">
+      <div class="tagline">Learn faster and live easier</div>
+    </div>
+
+    <header class="container">
+      <div class="brand" id="brandBtn" title="About LIFEKOACH">
+        <div class="logo-mark" aria-hidden="true"></div>
+        <div class="brand-title">LIFEKOACH</div>
+      </div>
+
+      <nav>
+        <a id="navHome">Home</a>
+        <a id="navServices">Services</a>
+        <a id="navTeam">Team</a>
+        <a id="navContact">Contact</a>
+        <button class="btn" id="signInBtn">Sign in</button>
+      </nav>
+    </header>
+
+    <div class="container">
+      <!-- Hero -->
+      <section id="home" class="hero reveal">
+        <div class="hero-left">
+          <div class="eyebrow">Mentorship & Growth</div>
+          <h1>LIVE A JOYFUL LIFE</h1>
+          <p class="muted">
+            Confidential, affordable sessions for students and young
+            professionals — career, finance, exams, relationships, health.
+          </p>
+          <div class="hero-ctas">
+            <button class="btn" id="bookBtn">Book Free Advice</button>
+            <button class="btn ghost" id="exploreBtn">Explore Services</button>
+          </div>
+        </div>
+
+        <div class="hero-right">
+          <div class="hero-card">
+            <h3 style="margin: 12px 0 6px; color: var(--dark)">
+              You deserve to be happy.
+            </h3>
+            <p class="muted" style="margin: 0">
+              Connect with verified mentors and practical plans.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Problems -->
+      <section id="problems" class="reveal">
+        <h3>Problems We Solve</h3>
+        <p class="muted">
+          Choose your area of concern and connect with the right mentor.
+        </p>
+
+        <div class="issues-grid" style="margin-top: 16px">
+          <div class="issue-card" data-key="academic" title="Academic Pressure">
+            <img
+              src="public/academic-pressure.webp"
+              class="issue-media"
+              alt="Academic"
+            />
+            <div class="issue-body">
+              <div class="issue-title">Academic Pressure</div>
+              <div class="muted">
+                Study skills, burnout management, goal planning
+              </div>
+            </div>
+          </div>
+
+          <div class="issue-card" data-key="industry" title="Industry Pressure">
+            <img
+              src="public/industry-pressure.webp"
+              class="issue-media"
+              alt="Industry"
+            />
+            <div class="issue-body">
+              <div class="issue-title">Industry Pressure</div>
+              <div class="muted">
+                Work-life balance, skill development, career progression
+              </div>
+            </div>
+          </div>
+
+          <div class="issue-card" data-key="finance" title="Financial Pressure">
+            <img
+              src="public/financial-stress.webp"
+              class="issue-media"
+              alt="Finance"
+            />
+            <div class="issue-body">
+              <div class="issue-title">Financial Pressure</div>
+              <div class="muted">
+                Budgeting, debt & savings, smart investing
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="issue-card"
+            data-key="relationship"
+            title="Relationship Pressure"
+          >
+            <img
+              src="public/relationship-pressure.jpg"
+              class="issue-media"
+              alt="Relationship"
+            />
+            <div class="issue-body">
+              <div class="issue-title">Relationship Pressure</div>
+              <div class="muted">Romantic, family, friendship support</div>
+            </div>
+          </div>
+
+          <div class="issue-card" data-key="health" title="Health & Lifestyle">
+            <img
+              src="public/health-lifestyle.jpg"
+              class="issue-media"
+              alt="Health"
+            />
+            <div class="issue-body">
+              <div class="issue-title">Health & Lifestyle</div>
+              <div class="muted">
+                Sleep, exercise, nutrition, stress reduction
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="issue-card"
+            data-key="career-guidance"
+            title="Career Guidance"
+          >
+            <img
+              src="public/career-guidance.jpg"
+              class="issue-media"
+              alt="Career"
+            />
+            <div class="issue-body">
+              <div class="issue-title">Career Guidance</div>
+              <div class="muted">
+                Resume, interviews, internships, industry fit
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Services -->
+      <section id="services" class="reveal">
+        <h3>Services</h3>
+        <div class="services-header">
+          <div class="pills" id="filterPills">
+            <div class="pill active" data-cat="all">All</div>
+            <div class="pill" data-cat="mentorship">Mentorship</div>
+            <div class="pill" data-cat="development">Development</div>
+            <div class="pill" data-cat="growth">Growth</div>
+            <div class="pill" data-cat="health">Health</div>
+          </div>
+          <select id="sortSelect">
+            <option value="popular">Sort: Popular</option>
+            <option value="price">Sort: Price</option>
+          </select>
+        </div>
+
+        <div class="services-grid" id="servicesGrid">
+          <div
+            class="service-card"
+            data-id="svc-webinar"
+            data-cat="mentorship"
+            data-price="0"
+          >
+            <div class="svc-icon">🎙️</div>
+            <span class="svc-badge">Free</span>
+            <h4 class="svc-title">Free Intro Webinar</h4>
+            <p class="svc-desc">
+              Join our weekly live session and discover how mentorship can
+              transform your journey.
+            </p>
+            <div class="svc-footer">
+              <span class="svc-price free">Free</span>
+              <button class="svc-btn">Join Now</button>
+            </div>
+          </div>
+
+          <div
+            class="service-card svc-featured"
+            data-id="svc-mentorship"
+            data-cat="mentorship"
+            data-price="299"
+          >
+            <div class="svc-icon">🤝</div>
+            <span class="svc-badge popular">Popular</span>
+            <h4 class="svc-title">1:1 Mentorship</h4>
+            <p class="svc-desc">
+              Private sessions tailored to your goals with a dedicated mentor.
+            </p>
+            <div class="svc-footer">
+              <span class="svc-price">₹299<small>/hr</small></span>
+              <button class="svc-btn">Book Now</button>
+            </div>
+          </div>
+
+          <div
+            class="service-card"
+            data-id="svc-career"
+            data-cat="development"
+            data-price="349"
+          >
+            <div class="svc-icon">💼</div>
+            <span class="svc-badge">Development</span>
+            <h4 class="svc-title">Career Coaching</h4>
+            <p class="svc-desc">
+              Resume reviews, mock interviews, and industry navigation
+              strategies.
+            </p>
+            <div class="svc-footer">
+              <span class="svc-price">₹349<small>/hr</small></span>
+              <button class="svc-btn">Book Now</button>
+            </div>
+          </div>
+
+          <div
+            class="service-card"
+            data-id="svc-finance"
+            data-cat="growth"
+            data-price="299"
+          >
+            <div class="svc-icon">📊</div>
+            <span class="svc-badge">Growth</span>
+            <h4 class="svc-title">Financial Planning</h4>
+            <p class="svc-desc">
+              Budgeting, saving, and investment guidance for students and early
+              earners.
+            </p>
+            <div class="svc-footer">
+              <span class="svc-price">₹299<small>/hr</small></span>
+              <button class="svc-btn">Book Now</button>
+            </div>
+          </div>
+
+          <div
+            class="service-card"
+            data-id="svc-wellness"
+            data-cat="health"
+            data-price="399"
+          >
+            <div class="svc-icon">🧘</div>
+            <span class="svc-badge">Health</span>
+            <h4 class="svc-title">Wellness &amp; Mindfulness</h4>
+            <p class="svc-desc">
+              Burnout recovery, stress reduction, and sustainable lifestyle
+              habits.
+            </p>
+            <div class="svc-footer">
+              <span class="svc-price">₹399<small>/hr</small></span>
+              <button class="svc-btn">Book Now</button>
+            </div>
+          </div>
+
+          <div
+            class="service-card"
+            data-id="svc-plans"
+            data-cat="growth"
+            data-price="199"
+          >
+            <div class="svc-icon">🤖</div>
+            <span class="svc-badge">Growth</span>
+            <h4 class="svc-title">AI Progress Plans</h4>
+            <p class="svc-desc">
+              Personalised weekly roadmaps powered by AI and reviewed by your
+              mentor.
+            </p>
+            <div class="svc-footer">
+              <span class="svc-price">₹199<small>/mo</small></span>
+              <button class="svc-btn">Get Started</button>
+            </div>
+          </div>
+
+          <div
+            class="service-card"
+            data-id="svc-group"
+            data-cat="mentorship"
+            data-price="149"
+          >
+            <div class="svc-icon">👥</div>
+            <span class="svc-badge">Mentorship</span>
+            <h4 class="svc-title">Group Workshops</h4>
+            <p class="svc-desc">
+              Peer-learning cohorts with expert-led workshops on life skills.
+            </p>
+            <div class="svc-footer">
+              <span class="svc-price">₹149<small>/session</small></span>
+              <button class="svc-btn">Join Group</button>
+            </div>
+          </div>
+
+          <div
+            class="service-card"
+            data-id="svc-resume"
+            data-cat="development"
+            data-price="249"
+          >
+            <div class="svc-icon">📝</div>
+            <span class="svc-badge">Development</span>
+            <h4 class="svc-title">Resume &amp; Interview Prep</h4>
+            <p class="svc-desc">
+              ATS-optimised resume builds and mock interview sessions with
+              experts.
+            </p>
+            <div class="svc-footer">
+              <span class="svc-price">₹249<small>/session</small></span>
+              <button class="svc-btn">Book Now</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Booking -->
+      <section id="booking" class="reveal">
+        <h3>Book a Session</h3>
+        <div class="booking">
+          <div class="card">
+            <label><strong>Select Date</strong></label>
+            <input type="date" id="bookingDate" />
+
+            <div style="margin-top: 12px">
+              <label><strong>Choose Time Slot</strong></label>
+              <div id="slots" style="margin-top: 8px"></div>
+            </div>
+
+            <div style="margin-top: 12px">
+              <label><strong>Duration</strong></label>
+              <select id="duration">
+                <option value="30">30 minutes</option>
+                <option value="45">45 minutes</option>
+                <option value="60">60 minutes</option>
+              </select>
+            </div>
+
+            <div style="margin-top: 12px">
+              <label><strong>Notes</strong></label>
+              <textarea
+                id="bookingNotes"
+                rows="3"
+                placeholder="Any context for the mentor"
+              ></textarea>
+            </div>
+
+            <div style="margin-top: 12px">
+              <label><strong>Payment</strong></label>
+              <div class="payment-placeholder">
+                UPI / Card / Netbanking placeholder
+              </div>
+            </div>
+
+            <div class="btn-row">
+              <button class="btn" id="proceedPay">Proceed to Pay</button>
+              <button class="btn ghost" id="saveDraft">Save as Draft</button>
+            </div>
+          </div>
+
+          <aside class="card">
+            <h4>Selected Mentor</h4>
+            <div id="selectedMentor" class="muted">No mentor selected</div>
+
+            <div style="margin-top: 12px">
+              <button class="btn" id="openMentors">Choose Mentor</button>
+            </div>
+
+            <div style="margin-top: 18px">
+              <h4>Booking Summary</h4>
+              <div id="bookingSummary" class="muted">No booking yet</div>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <!-- Chat & Comments -->
+      <section id="chat" class="reveal">
+        <h3>In-App Chat</h3>
+        <div class="card">
+          <div class="chat-box">
+            <div class="messages" id="messages"></div>
+            <div class="chat-input-wrap">
+              <input id="chatInput" placeholder="Type a message" />
+              <button class="btn" id="sendChatBtn">Send</button>
+            </div>
+          </div>
+          <div style="margin-top: 8px; font-size: 13px; color: var(--muted)">
+            Showing messages from the last 1 hour only
+          </div>
+        </div>
+
+        <h3 style="margin-top: 18px">Comments & Reviews</h3>
+        <div class="card">
+          <div id="commentsList" style="margin-bottom: 12px"></div>
+          <textarea
+            id="commentText"
+            rows="2"
+            placeholder="Write a review"
+          ></textarea>
+          <div style="margin-top: 8px; display: flex; gap: 8px">
+            <button class="btn" id="postComment">Post</button>
+          </div>
+        </div>
+
+        <h3 style="margin-top: 18px">Complaint Box</h3>
+        <div class="card">
+          <textarea
+            id="complaintText"
+            rows="3"
+            placeholder="Describe your complaint"
+          ></textarea>
+          <div style="margin-top: 8px">
+            <button class="btn" id="submitComplaint">Submit Complaint</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Team -->
+      <section id="team" class="reveal">
+        <h3>Our Team</h3>
+        <div class="team-grid">
+          <div
+            class="team-card"
+            data-name="Dibya Jyoti Das"
+            data-role="Founder"
+          >
+            <div class="team-avatar">
+              <img src="public/dibya.jpg" alt="Dibya" />
+            </div>
+            <div>
+              <div class="team-name">Dibya Jyoti Das</div>
+              <div class="team-role">Founder</div>
+            </div>
+          </div>
+          <div class="team-card" data-name="Ankur" data-role="HR">
+            <div class="team-avatar">
+              <img src="public/ankur.jpg" alt="Ankur" />
+            </div>
+            <div>
+              <div class="team-name">Ankur</div>
+              <div class="team-role">HR</div>
+            </div>
+          </div>
+          <div class="team-card" data-name="Praveen" data-role="P.A">
+            <div class="team-avatar">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640">
+                <!--!Font Awesome Free v7.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.-->
+                <path
+                  d="M320 312C386.3 312 440 258.3 440 192C440 125.7 386.3 72 320 72C253.7 72 200 125.7 200 192C200 258.3 253.7 312 320 312zM290.3 368C191.8 368 112 447.8 112 546.3C112 562.7 125.3 576 141.7 576L498.3 576C514.7 576 528 562.7 528 546.3C528 447.8 448.2 368 349.7 368L290.3 368z"
+                />
+              </svg>
+              <!-- <img src="public/praveen.jpg" alt="Praveen" /> -->
+            </div>
+            <div>
+              <div class="team-name">Praveen</div>
+              <div class="team-role">P.A</div>
+            </div>
+          </div>
+          <div
+            class="team-card"
+            data-name="Sushant"
+            data-role="Marketing & Sales Team"
+          >
+            <div class="team-avatar">
+              <img src="public/sushaant.jpg" alt="Sushant" />
+            </div>
+            <div>
+              <div class="team-name">Sushant</div>
+              <div class="team-role">Marketing & Sales Team</div>
+            </div>
+          </div>
+          <div
+            class="team-card"
+            data-name="Akash Kumar"
+            data-role="Marketing & Sales Manager"
+          >
+            <div class="team-avatar">
+              <img src="public/akash.jpg" alt="Akash Kumar" />
+            </div>
+            <div>
+              <div class="team-name">Akash Kumar</div>
+              <div class="team-role">Marketing & Sales Manager</div>
+            </div>
+          </div>
+          <div
+            class="team-card"
+            data-name="Ishika"
+            data-role="Marketing & Sales Team"
+          >
+            <div class="team-avatar">
+              <img src="public/ishika.jpg" alt="Ishika" />
+            </div>
+            <div>
+              <div class="team-name">Ishika</div>
+              <div class="team-role">Marketing & Sales Team</div>
+            </div>
+          </div>
+          <div class="team-card" data-name="Ayush" data-role="Project Manager">
+            <div class="team-avatar">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640">
+                <!--!Font Awesome Free v7.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.-->
+                <path
+                  d="M320 312C386.3 312 440 258.3 440 192C440 125.7 386.3 72 320 72C253.7 72 200 125.7 200 192C200 258.3 253.7 312 320 312zM290.3 368C191.8 368 112 447.8 112 546.3C112 562.7 125.3 576 141.7 576L498.3 576C514.7 576 528 562.7 528 546.3C528 447.8 448.2 368 349.7 368L290.3 368z"
+                />
+              </svg>
+
+              <!-- <img src="public/ayush.jpg" alt="Ayush" /> -->
+            </div>
+            <div>
+              <div class="team-name">Ayush</div>
+              <div class="team-role">Project Manager</div>
+            </div>
+          </div>
+          <div class="team-card" data-name="Talim" data-role="Developer">
+            <div class="team-avatar">
+              <img src="public/talim.png" alt="Talim" />
+            </div>
+            <div>
+              <div class="team-name">Talim</div>
+              <div class="team-role">Developer</div>
+            </div>
+          </div>
+          <div
+            class="team-card"
+            data-name="Akash Chaurasiya"
+            data-role="Accounts & MIS Excel"
+          >
+            <div class="team-avatar">
+              <img src="public/akash-chaurasiya.jpg" alt="Akash Chaurasiya" />
+            </div>
+            <div>
+              <div class="team-name">Akash Chaurasiya</div>
+              <div class="team-role">Accounts & MIS Excel</div>
+            </div>
+          </div>
+          <div
+            class="team-card"
+            data-name="Aditya"
+            data-role="Content Creation"
+          >
+            <div class="team-avatar">
+              <img src="public/aditya.jpg" alt="Aditya" />
+            </div>
+            <div>
+              <div class="team-name">Aditya</div>
+              <div class="team-role">Content Creation</div>
+            </div>
+          </div>
+          <div
+            class="team-card"
+            data-name="Siddharth"
+            data-role="Web Developer"
+          >
+            <div class="team-avatar">
+              <img src="public/siddharth.jpg" alt="Siddharth" />
+            </div>
+            <div>
+              <div class="team-name">Siddharth</div>
+              <div class="team-role">Web Developer</div>
+            </div>
+          </div>
+          <div
+            class="team-card"
+            data-name="Harshita"
+            data-role="Sales And Marketing Team"
+          >
+            <div class="team-avatar">
+              <img src="public/harshita.jpg" alt="Harshita" />
+            </div>
+            <div>
+              <div class="team-name">Harshita</div>
+              <div class="team-role">Sales And Marketing Team</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <footer id="contact" class="reveal">© LIFEKOACH — Built with care</footer>
+    </div>
+
+    <!-- Modal backdrop -->
+    <div
+      class="modal-backdrop"
+      id="modalBackdrop"
+      role="dialog"
+      aria-hidden="true"
+    >
+      <div class="modal" id="modalContent">
+        <div class="modal-header">
+          <h3 id="modalTitle">Modal</h3>
+          <button id="closeModalBtn" class="btn ghost">Close</button>
+        </div>
+        <div id="modalBody" class="modal-body"></div>
+      </div>
+    </div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
