@@ -59,7 +59,7 @@ header {
   border-radius: 12px;
   object-fit: cover;
   box-shadow: var(--shadow-sm);
-  background: #000; /* Bheji gayi image black background wali hai isliye support ke liye */
+  background: transparent;
 }
 
 .brand-title {
