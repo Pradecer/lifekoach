@@ -4,6 +4,7 @@
   --surface: #ffffff;
   --text: #0d3b2e;
   --muted: #6b7280;
+  /* backward-compat alias used in script.js */
   --growth: #2fb86f;
   --dark: #0d3b2e;
   --dark-2: #1a5c3e;
@@ -52,7 +53,6 @@ header {
   cursor: pointer;
 }
 
-/* Naya logo image style */
 .logo-img {
   width: 48px;
   height: 48px;
