@@ -1,0 +1,24 @@
+127.0.0.1 - - [25/Feb/2026 18:04:03] "GET /index.html HTTP/1.1" 200 -
+127.0.0.1 - - [25/Feb/2026 18:04:03] "GET /style.css HTTP/1.1" 200 -
+127.0.0.1 - - [25/Feb/2026 18:04:03] "GET /public/logo.jpeg HTTP/1.1" 200 -
+127.0.0.1 - - [25/Feb/2026 18:04:03] "GET /public/academic-pressure.webp HTTP/1.1" 200 -
+127.0.0.1 - - [25/Feb/2026 18:04:03] "GET /public/health-lifestyle.jpg HTTP/1.1" 200 -
+127.0.0.1 - - [25/Feb/2026 18:04:03] "GET /public/career-guidance.jpg HTTP/1.1" 200 -
+127.0.0.1 - - [25/Feb/2026 18:04:03] "GET /public/relationship-pressure.jpg HTTP/1.1" 200 -
+127.0.0.1 - - [25/Feb/2026 18:04:03] "GET /public/industry-pressure.webp HTTP/1.1" 200 -
+127.0.0.1 - - [25/Feb/2026 18:04:03] "GET /public/financial-stress.webp HTTP/1.1" 200 -
+127.0.0.1 - - [25/Feb/2026 18:04:03] "GET /script.js HTTP/1.1" 200 -
+127.0.0.1 - - [25/Feb/2026 18:04:03] "GET /public/ankur.jpg HTTP/1.1" 200 -
+127.0.0.1 - - [25/Feb/2026 18:04:03] "GET /public/dibya.jpeg HTTP/1.1" 200 -
+127.0.0.1 - - [25/Feb/2026 18:04:03] "GET /public/praveen.jpeg HTTP/1.1" 200 -
+127.0.0.1 - - [25/Feb/2026 18:04:03] "GET /public/sushaant.jpeg HTTP/1.1" 200 -
+127.0.0.1 - - [25/Feb/2026 18:04:03] "GET /public/akash.jpeg HTTP/1.1" 200 -
+127.0.0.1 - - [25/Feb/2026 18:04:03] "GET /public/ishika.jpg HTTP/1.1" 200 -
+127.0.0.1 - - [25/Feb/2026 18:04:03] "GET /public/talim.png HTTP/1.1" 200 -
+127.0.0.1 - - [25/Feb/2026 18:04:03] code 404, message File not found
+127.0.0.1 - - [25/Feb/2026 18:04:03] "GET /public/akash-chaurasiya.jpg HTTP/1.1" 404 -
+127.0.0.1 - - [25/Feb/2026 18:04:03] "GET /public/ayush.jpeg HTTP/1.1" 200 -
+127.0.0.1 - - [25/Feb/2026 18:04:03] code 404, message File not found
+127.0.0.1 - - [25/Feb/2026 18:04:03] "GET /public/siddharth.jpg HTTP/1.1" 404 -
+127.0.0.1 - - [25/Feb/2026 18:04:04] "GET /public/harshita.jpeg HTTP/1.1" 200 -
+127.0.0.1 - - [25/Feb/2026 18:04:04] "GET /public/aditya.jpeg HTTP/1.1" 200 -
