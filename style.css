@@ -54,10 +54,10 @@ header {
 
 /* Naya logo image style */
 .logo-img {
-  width: 48px;
+  width: auto;
   height: 48px;
-  border-radius: 12px;
-  object-fit: cover;
+  border-radius: 8px;
+  object-fit: contain;
   box-shadow: var(--shadow-sm);
   background: transparent;
 }
